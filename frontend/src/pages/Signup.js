@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "./Auth.css"; // ✅ Custom CSS file for color and 3D style
+import "./Auth.css"; 
 
 const Signup = () => {
   const [formData, setFormData] = useState({ username: "", password: "" });
@@ -21,10 +21,10 @@ const Signup = () => {
       });
 
       if (response.ok) {
-        setMessage("✅ Signup successful! Redirecting to Login...");
+        setMessage(" Signup successful! Redirecting to Login...");
         setTimeout(() => navigate("/login"), 1500);
       } else {
-        setMessage("❌ Signup failed. Try again!");
+        setMessage(" Signup failed. Try again!");
       }
     } catch (error) {
       console.error("Error:", error);

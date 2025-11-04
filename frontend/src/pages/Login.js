@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "./Auth.css"; // ✅ same CSS file
+import "./Auth.css"; 
 
 const Login = () => {
   const [credentials, setCredentials] = useState({ username: "", password: "" });
@@ -23,10 +23,10 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("token", data.token);
-        setMessage("✅ Login successful! Redirecting...");
+        setMessage(" Login successful! Redirecting...");
         setTimeout(() => navigate("/"), 1500);
       } else {
-        setMessage("❌ Invalid credentials!");
+        setMessage(" Invalid credentials!");
       }
     } catch (error) {
       console.error("Error:", error);

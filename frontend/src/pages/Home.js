@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
 
-  // 🕐 Automatically navigate to login after 1 minute
+  // Automatically navigate to login after 1 minute
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/login");

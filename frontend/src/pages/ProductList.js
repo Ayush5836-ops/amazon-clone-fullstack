@@ -7,15 +7,15 @@ const ProductList = () => {
     fetch("http://localhost:8080/api/products")
       .then((response) => response.json())
       .then((data) => {
-        console.log("✅ Products fetched:", data);
+        console.log(" Products fetched:", data);
         setProducts(data);
       })
-      .catch((error) => console.error("❌ Error fetching products:", error));
+      .catch((error) => console.error(" Error fetching products:", error));
   }, []);
 
   return (
     <div className="container mt-4">
-      <h2 className="text-center mb-4">🛍️ Available Products</h2>
+      <h2 className="text-center mb-4">🛍️ Products</h2>
 
       <div className="row">
         {products.length > 0 ? (

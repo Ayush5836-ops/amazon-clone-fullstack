@@ -75,13 +75,13 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .cors(cors -> {}) // Enable CORS
             .authorizeHttpRequests(auth -> auth
-                // ✅ Public endpoints (no token required)
+                //  Public endpoints (no token required)
                 .requestMatchers("/api/auth/**", "/api/products/**", "/", "/error").permitAll()
 
-                // ✅ Allow GET for admin testing (open)
+                //  Allow GET for admin testing (open)
                 .requestMatchers(HttpMethod.GET, "/api/admin/**").permitAll()
 
-                // 🔒 Restrict POST/PUT/DELETE for admin only
+                //  Restrict POST/PUT/DELETE for admin only
                 .requestMatchers(HttpMethod.POST, "/api/admin/**").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.PUT, "/api/admin/**").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.DELETE, "/api/admin/**").hasRole("ADMIN")
