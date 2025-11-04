@@ -1,48 +1,48 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // You’ll connect this to your backend API later
-    // For now, dummy data:
-    const sampleProducts = [
-      { id: 1, name: 'iPhone 15 Pro', price: 129999, category: 'Mobiles' },
-      { id: 2, name: 'Samsung S24 Ultra', price: 119999, category: 'Mobiles' },
-      { id: 3, name: 'Sony Headphones', price: 9999, category: 'Accessories' },
-    ];
-    setProducts(sampleProducts);
-
-    // Example when backend ready:
-    // axios.get('http://localhost:8080/api/products')
-    //   .then(res => setProducts(res.data))
-    //   .catch(err => console.error(err));
+    fetch("http://localhost:8080/api/products")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("✅ Products fetched:", data);
+        setProducts(data);
+      })
+      .catch((error) => console.error("❌ Error fetching products:", error));
   }, []);
 
   return (
-    <div className="product-list">
-      <h2>Product List 🛒</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Product Name</th>
-            <th>Category</th>
-            <th>Price (₹)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {products.map((p) => (
-            <tr key={p.id}>
-              <td>{p.id}</td>
-              <td>{p.name}</td>
-              <td>{p.category}</td>
-              <td>{p.price.toLocaleString()}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="container mt-4">
+      <h2 className="text-center mb-4">🛍️ Available Products</h2>
+
+      <div className="row">
+        {products.length > 0 ? (
+          products.map((product) => (
+            <div className="col-md-4 mb-4" key={product.id}>
+              <div className="card shadow-sm">
+                <img
+                  src={product.imageUrl}
+                  className="card-img-top"
+                  alt={product.name}
+                  style={{ height: "200px", objectFit: "cover" }}
+                />
+                <div className="card-body text-center">
+                  <h5 className="card-title">{product.name}</h5>
+                  <p className="card-text text-muted">{product.description}</p>
+                  <h6 className="text-success">₹{product.price}</h6>
+                  <span className="badge bg-secondary">{product.category}</span>
+                  <br />
+                  <button className="btn btn-primary mt-2">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          ))
+        ) : (
+          <h5 className="text-center text-muted">Loading products...</h5>
+        )}
+      </div>
     </div>
   );
 };

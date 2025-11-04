@@ -1,1 +1,17 @@
+com\amazon\clone\config\SecurityConfig.class
+com\amazon\clone\payload\AuthRequest.class
+com\amazon\clone\repository\ProductRepository.class
+com\amazon\clone\payload\RegisterRequest.class
+com\amazon\clone\controller\AdminController.class
+com\amazon\clone\config\WebConfig$1.class
+com\amazon\clone\model\User.class
+com\amazon\clone\security\JwtAuthenticationFilter.class
 com\amazon\clone\BackendApplication.class
+com\amazon\clone\payload\AuthResponse.class
+com\amazon\clone\config\WebConfig.class
+com\amazon\clone\repository\UserRepository.class
+com\amazon\clone\service\ProductService.class
+com\amazon\clone\controller\AuthController.class
+com\amazon\clone\security\JwtUtil.class
+com\amazon\clone\controller\ProductController.class
+com\amazon\clone\model\Product.class

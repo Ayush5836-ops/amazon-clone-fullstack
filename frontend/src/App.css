@@ -36,3 +36,198 @@
     transform: rotate(360deg);
   }
 }
+.container {
+  max-width: 1200px;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card img {
+  border-bottom: 1px solid #ddd;
+}
+
+.card-body h5 {
+  font-weight: bold;
+}
+a/* 🌟 GLOBAL APP STYLE */
+.App {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* 🟨 Navbar Style */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  z-index: 10;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}
+
+/* 🟦 Sidebar Style */
+.sidebar {
+  position: fixed;
+  top: 60px; /* below navbar */
+  left: 0;
+  width: 220px;
+  height: calc(100vh - 60px);
+  background-color: #1e2a38;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h3 {
+  color: #ff9800;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: #ff9800;
+}
+
+/* 🟩 Main Layout */
+.main-layout {
+  display: flex;
+  margin-top: 60px; /* below navbar */
+}
+
+.content {
+  flex: 1;
+  margin-left: 220px; /* sidebar width */
+  padding: 30px;
+  min-height: calc(100vh - 60px);
+  background-color: #f8f9fa;
+}
+
+/* 🛍️ Product Page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-body h5 {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #ff9800;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e68900;
+}
+
+/* 🟣 Responsive Design */
+@media (max-width: 992px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .content {
+    margin-left: 180px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+}
+.home-page {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-warning {
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-warning:hover {
+  background-color: #e68900;
+  transform: scale(1.05);
+}

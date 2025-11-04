@@ -1,1 +1,16 @@
 D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\BackendApplication.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\config\SecurityConfig.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\config\WebConfig.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\controller\AdminController.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\controller\AuthController.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\controller\ProductController.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\model\Product.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\model\User.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\payload\AuthRequest.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\payload\AuthResponse.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\payload\RegisterRequest.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\repository\ProductRepository.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\repository\UserRepository.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\security\JwtAuthenticationFilter.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\security\JwtUtil.java
+D:\amazon-clone-fullstack\backend\src\main\java\com\amazon\clone\service\ProductService.java
